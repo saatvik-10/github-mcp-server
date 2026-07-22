@@ -1,11 +1,14 @@
-import { McpServer } from "@modelcontextprotocol/sdk/server/mcp";
-import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio";
+import { McpServer } from '@modelcontextprotocol/sdk/server/mcp';
+import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio';
+import { registerEchoTool } from './tools/echo.tool';
 
 const server = new McpServer({
-    name: "mcp-server",
-    version: "1.0.0"
-})
+  name: 'mcp-server',
+  version: '1.0.0',
+});
 
-const transport = new StdioServerTransport()
+registerEchoTool(server);
 
-await server.connect(transport)
+const transport = new StdioServerTransport();
+
+await server.connect(transport);
