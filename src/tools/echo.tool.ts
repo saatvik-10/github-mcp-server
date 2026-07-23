@@ -1,4 +1,4 @@
-import { McpServer } from '@modelcontextprotocol/sdk/server/mcp';
+import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { EchoService } from '../services/echo.service';
 import { echoSchema } from '../schemas/echo.schema';
 

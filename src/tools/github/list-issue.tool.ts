@@ -1,4 +1,4 @@
-import { McpServer } from '@modelcontextprotocol/sdk/server/mcp';
+import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { githubService } from '../../services/github.service';
 import { listIssuesSchema } from '../../schemas/github/list-issues.schema';
 
