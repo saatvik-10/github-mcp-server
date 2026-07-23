@@ -1,5 +1,6 @@
-import { McpServer } from '@modelcontextprotocol/sdk/server/mcp';
-import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio';
+import 'dotenv/config';
+import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
+import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js';
 import { registerEchoTool } from './tools/echo.tool';
 import { registerGithubTools } from './tools/github/index';
 
