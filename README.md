@@ -1,15 +1,38 @@
 # mcp-server
 
-To install dependencies:
+MCP server with GitHub integration tools for repository and issue management.
+
+## Setup
 
 ```bash
 bun install
 ```
 
-To run:
+Copy `.env.example` to `.env` and set your GitHub token (optional — unauthenticated requests work for public repos):
 
-```bash
-bun run index.ts
+```env
+GITHUB_TOKEN=ghp_xxxxxxxxxxxxxxxx
 ```
 
-This project was created using `bun init` in bun v1.3.14. [Bun](https://bun.com) is a fast all-in-one JavaScript runtime.
+## Usage
+
+```bash
+bun run src/index.ts
+```
+
+The server runs on stdio — connect it to an MCP client (e.g., MCP Inspector).
+
+## Tools
+
+| Tool | Description |
+|---|---|
+| `echo` | Returns the same message back |
+| `list-repositories` | List GitHub repos for a user |
+| `repository-details` | Get details of a specific repo |
+| `search-repositories` | Search repos by query |
+| `list-issues` | List issues for a repo |
+| `create-issue` | Create a new issue |
+
+## Demo
+
+![MCP Inspector demo](public/image.png)
